@@ -1,38 +1,28 @@
-# Ask: roll the dice?
-# If user enters y
-#    Generate two random numbers
-#    Print the numbers
-# If user enters n
-#    Print "thank you"
-#    Terminate
-# Else
-#    Print "invalid input"
+# Dice Rolling Game
+# Ask the user if they want to roll the dice
+# If the user enters "y":
+#   - Generate two random numbers between 1 and 6
+#   - Print the result
+# If the user enters "n":
+#   - Print a thank you message
+#   - Exit the program
+# Otherwise:
+#   - Print an invalid input message
 
-# burada ilk defa random modülünü import ediyoruz
-import random
-# hatırlatma: modül ile fonksiyon arasındaki fark:
-# modül: python kütüphanesinden bir dosya
-# fonksiyon: o dosyanın içindeki bir işlev
+import random  # Used to generate random numbers
 
-# random modülünün amacı rastgele sayılar üretmektir
-
-# kullanıcıdan girdi alıyoruz
-# girdiyi küçük harfe çeviriyoruz
-while True:  # sonsuz döngü başlat
+# Keep asking until the user provides a valid input
+while True:
     user_input = input("Do you want to roll the dice? (y/n): ").lower()
-    if user_input == "y":  # eğer kullanıcı "y" girdiyse
-        dice1 = random.randint(1, 6)  # 1 ile 6 arasında rastgele bir sayı üret
-        dice2 = random.randint(1, 6)  # 1 ile 6 arasında rastgele bir sayı üret
-        print(f"You rolled {dice1} and {dice2}")  # sonucu yazdır
-    elif user_input == "n":  # eğer kullanıcı "n" girdiyse
-        print("Thank you!")  # teşekkür mesajı yazdır
-        break  # döngüyü sonlandır
-    else:  # eğer kullanıcı geçersiz bir girdi girdiyse
-        print("Invalid input")  # geçersiz girdi mesajı yazdır
-        # program burada sona erer
-# burada while kullanmamızın nedeni kullanıcı geçerli bir girdi verene kadar sormaya devam etmesidir
 
-# for'dan farkı:
-# for döngüsü genellikle belirli sayıda tekrarlama için kullanılır
-# while döngüsü ise belirli bir koşul doğru olduğu sürece devam eder
-# bu yüzden burada while kullanıyoruz çünkü kullanıcı geçerli bir girdi verene kadar devam etmesini istiyoruz
+    if user_input == "y":
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+        print(f"You rolled {dice1} and {dice2}")
+
+    elif user_input == "n":
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid input. Please enter 'y' or 'n'.")
