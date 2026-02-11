@@ -47,3 +47,8 @@ while True:
 # Because "guess" is defined inside the try block,
 # we also check the guess with if-elif-else inside the same block.
 # This way, the program can access the variable without scope problems.
+
+# Program summary:
+# The computer picks a random number and the user keeps guessing in a loop.
+# try-except prevents the program from crashing on non-numeric input.
+# The loop stops only when the correct number is guessed.

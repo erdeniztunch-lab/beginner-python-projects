@@ -39,3 +39,8 @@ while True:
     should_continue = input("Continue (y/n): ").lower()
     if should_continue == 'n':
         break
+
+# Program summary:
+# The program asks choices in a loop and validates user input each round.
+# The computer selects randomly, then simple conditions decide the winner.
+# A loop is used to let the user play multiple rounds without restarting.

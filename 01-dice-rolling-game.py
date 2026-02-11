@@ -26,3 +26,8 @@ while True:
 
     else:
         print("Invalid input. Please enter 'y' or 'n'.")
+
+# Program summary:
+# This game loops until the user chooses to stop.
+# It uses random numbers to simulate two dice and prints each roll.
+# A loop is used because the number of rounds is controlled by the user.
